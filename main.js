@@ -1,4 +1,4 @@
-nums=[]
+let nums=[]
 
 var reps = parseInt(prompt("Podaj ile liczb wprowadzamy do tablicy"))
 
