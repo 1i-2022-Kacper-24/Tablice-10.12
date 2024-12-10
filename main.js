@@ -1,11 +1,28 @@
-let nums=[]
+let nulls = []
+let nums = []
+let added
+let length = 0
 
-let reps = parseInt(prompt("Podaj ile liczb wprowadzamy do tablicy"))
+do {
+    added = parseInt(prompt("Podaj liczę: "))
 
-while(reps>0){
-    nums.push(parseInt(prompt("Podaj dodawaną liczbę")))
-    reps=reps-1
-}
+    while(isNaN(added)){
+    added = parseInt(prompt("Podaj liczę: "))}
+
+    if (added===0){
+        nulls.push(added)
+        length = length+1
+    }
+
+    else if (added % 2 == 0){
+        nums.push(added)
+    }
+    
+    else if (added % 2 == 1){
+        nums.unshift(added)
+    }
 
 
-document.write(nums)
+} while (confirm("Wpisać następną liczbę?") == true)
+document.write("\n\nIlość zer wynosi: " + length)
+document.write("\n\nZawartość tablicy: " + nums)
